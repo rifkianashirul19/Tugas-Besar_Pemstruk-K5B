@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Aplikasi Kasir Restoran</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">K5B Pemstruk</div>
+        <div class="nav-link">
+            <div class="menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="kasirr.html">Menu</a></li>
+                <li><a href="/">Contact</a></li>
+                <li class="settings">
+                    <a href="/">Settings</a>
+                    <ul class="dropdown">
+                        <li><a href="/">Profile</a></li>
+                        <li><a href="/">About</a></li>
+                        <li><a href="index.html">Exit</a></li>
+                    </ul>
+                </li>
+            </div>
+        </div>
+    </nav>
+    <div class="text-center">
+        <h1>Menu</h1>
+        <button onclick="database()">Makanan</button>
+        <div class="row">
+            <div class="col-7">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Nomor</th>
+                            <th scope="col">Menu</th>
+                            <th scope="col">Harga</th>
+                            <th scope="col">Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody class="table-group-divider">
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Nasi Kuning</td>
+                            <td>Rp 15.000,-</td>
+                            <td><button class="btn btn-outline-primary" onclick="tambahPesanan('Nasi Kuning', 15000, 1)">Tambah</button></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td colspan="2">Larry the Bird</td>
+                            <td>@twitter</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-5">
+                <h2>Pesanan</h2>
+                <ul id="pesanan"></ul>
+                <h3>Total Harga: <span id="totalHarga"></span></h3>
+                <button class="btn btn-primary" onclick="cetakStruk()">Cetak Struk</button>
+                <div id="pesan"></div>
+            </div>
+        </div>
+    </div>
+    <div class="botbar">
+        K5B &copy; 2023
+    </div>
+
+    <script src="app.js"></script>
+    <script src="database.js"></script>
+    <script src="cetak_struk.js"></script>
+</body>
+</html>

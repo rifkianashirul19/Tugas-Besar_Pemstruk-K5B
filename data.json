@@ -1,0 +1,14 @@
+[
+    {
+    "Menu":[
+        {"Nama"  : "Thai Tea Orginal",
+        "Harga" : 20000},
+        {"Nama"  : "Green Tea Original",
+        "Harga" : 20000},
+        {"Nama"  : "Lemon Yakult",
+        "Harga" : 25000},
+        {"Nama"  : "Lychee Yakult",
+        "Harga" : 23000}
+        ]
+    }
+]
