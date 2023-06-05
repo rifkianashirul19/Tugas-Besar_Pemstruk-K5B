@@ -29,56 +29,49 @@
             </div>
         </div>
     </nav>
-    <div class="text-center">
-        <h1>Menu</h1>
-        <button onclick="database()">Makanan</button>
-        <div class="row">
-            <div class="col-7">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th scope="col">Nomor</th>
-                            <th scope="col">Menu</th>
-                            <th scope="col">Harga</th>
-                            <th scope="col">Aksi</th>
-                        </tr>
-                    </thead>
-                    <tbody class="table-group-divider">
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Nasi Kuning</td>
-                            <td>Rp 15.000,-</td>
-                            <td><button class="btn btn-outline-primary" onclick="tambahPesanan('Nasi Kuning', 15000, 1)">Tambah</button></td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td colspan="2">Larry the Bird</td>
-                            <td>@twitter</td>
-                        </tr>
-                    </tbody>
-                </table>
+    <!-- Isi -->
+    <div class="container-fluid">
+        <div class="row row-cols-3">
+            <div class="col-6">
+                    <table class="table table-bordered border-primary caption-top" id="data-table">
+                        <caption>Menu</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Nomor</th>
+                                <th scope="col text-center">Menu</th>
+                                <th scope="col text-center">Harga</th>
+                                <th scope="col text-center">Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
             </div>
-            <div class="col-5">
-                <h2>Pesanan</h2>
-                <ul id="pesanan"></ul>
-                <h3>Total Harga: <span id="totalHarga"></span></h3>
-                <button class="btn btn-primary" onclick="cetakStruk()">Cetak Struk</button>
+            <div class="col-4">
+                <caption>Pesanan</caption>
+                    <ul id="pesanan"></ul>
+            </div>
+            <div class="col-2">
+                <caption>Total Harga</caption>
+                <span id="totalHarga"></span>
+                <br>
+                <br><br>
+                <br><br><br>
+                <br><br><br><br>
+                <button class="btn btn-warning" onclick="cetakStruk()">Bayar</button>
                 <div id="pesan"></div>
             </div>
         </div>
     </div>
-    <div class="botbar">
+        
+    
+    <footer class="text-center text-black">
         K5B &copy; 2023
-    </div>
+    </footer>
 
     <script src="app.js"></script>
-    <script src="database.js"></script>
     <script src="cetak_struk.js"></script>
+    <script src="data.js"></script>
+    <script src="button.js"></script>
 </body>
 </html>
