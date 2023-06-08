@@ -15,7 +15,7 @@ fetch('data.json')
       namaCell.textContent = item.nama;
       hargaCell.textContent = item.harga;
 
-      addButton.textContent = 'Tambah Pesanan';
+      addButton.textContent = 'Pesan';
       addButton.classList.add('btn', 'btn-primary');
       addButton.addEventListener('click', function() {
         tambahPesanan(item.nama, item.harga, 1);

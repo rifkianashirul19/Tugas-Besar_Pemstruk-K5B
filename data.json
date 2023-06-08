@@ -6,12 +6,11 @@
     },
     {
         "nomor": "02",
-        "nama": "Thai Tea Original",
+        "nama": "Thai Tea",
         "harga": 20000
     },
     {
         "nomor": "03",
-<<<<<<< HEAD
         "nama": "cappucino",
         "harga": 30000
     },
@@ -58,49 +57,6 @@
     {
         "nomor": "12",
         "nama": "Taro",
-=======
-        "nama": "#",
-        "harga": 20000
-    },
-    {
-        "nomor": "04",
-        "nama": "#",
-        "harga": 20000
-    },
-    {
-        "nomor": "05",
-        "nama": "#",
-        "harga": 20000
-    },
-    {
-        "nomor": "06",
-        "nama": "#",
-        "harga": 20000
-    },
-    {
-        "nomor": "07",
-        "nama": "#",
-        "harga": 20000
-    },
-    {
-        "nomor": "08",
-        "nama": "#",
-        "harga": 20000
-    },
-    {
-        "nomor": "09",
-        "nama": "#",
-        "harga": 20000
-    },
-    {
-        "nomor": "10",
-        "nama": "#",
-        "harga": 20000
-    },
-    {
-        "nomor": "11",
-        "nama": "#",
->>>>>>> 28c97711f7b55101be7de7974f68c19556410f6d
         "harga": 20000
     }
 ]

@@ -1,18 +1,11 @@
 var pesanan = [];
 var totalHarga = 0;
+var bayar = 0;
+var kembalian = 0;
 
 function tambahPesanan(menu, harga, jumlah) {
   pesanan.push({ menu: menu, harga: harga * jumlah, hargaPerItem: harga, jumlah: jumlah });
   totalHarga += harga * jumlah;
-  updateDaftarPesanan();
-  updateTotalHarga();
-  tampilkanPesan('Pesanan ' + menu + ' sejumlah ' + jumlah + ' telah dicatat.');
-}
-
-function hapusPesanan(index) {
-  var harga = pesanan[index].harga;
-  pesanan.splice(index, 1);
-  totalHarga -= harga;
   updateDaftarPesanan();
   updateTotalHarga();
 }
@@ -35,13 +28,25 @@ function kurangiJumlah(index) {
   }
 }
 
+function hapusPesanan(index) {
+  var harga = pesanan[index].harga;
+  pesanan.splice(index, 1);
+  totalHarga -= harga;
+  updateDaftarPesanan();
+  updateTotalHarga();
+}
+
 function updateDaftarPesanan() {
   var daftarPesanan = document.getElementById('pesanan');
   daftarPesanan.innerHTML = '';
 
   for (var i = 0; i < pesanan.length; i++) {
     var pesananItem = document.createElement('li');
-    pesananItem.innerHTML = pesanan[i].menu + ' - Rp ' + pesanan[i].harga + ' (' + pesanan[i].jumlah + ')'
+    pesananItem.innerHTML = pesanan[i].menu 
+      + ' | '
+      + ' Rp ' 
+      + pesanan[i].harga 
+      + ' (' + pesanan[i].jumlah + ')'
       + ' <button class="btn btn-success" onclick="tambahJumlah(' + i + ')">+</button>'
       + ' <button class="btn btn-warning" onclick="kurangiJumlah(' + i + ')">-</button>'
       + ' <button class="btn btn-danger" onclick="hapusPesanan(' + i + ')">Hapus</button>';
@@ -104,3 +109,17 @@ function kurangiJumlahPesanan(menu, jumlah) {
     tampilkanPesan('Pesanan ' + menu + ' tidak ditemukan.');
   }
 }
+
+function Tunai(){
+  bayar = parseFloat(document.getElementById('tunai').value);
+  
+  kembalian = bayar - totalHarga;
+  
+  if (kembalian >= 0) {
+      document.getElementById('kembalian').textContent = kembalian;
+      } else if (kembalian = 0){
+      document.getElementById('kembalian').textContent = 'Pembayaran Pas';
+      } else { 
+          document.getElementById('kembalian').textContent = 'Jumlah pembayaran tidak cukup.'
+      }
+  }

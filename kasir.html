@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Star Trek Drink</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Star Trek Drink</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="About.html">About</a>
+                </li>
+            </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Isi -->
+    <div class="container-fluid overflow-auto">
+        <div class="row row-cols-3">
+            <div class="col-5" id="Menu">
+                    <caption>Menu</caption>
+                    <table class="table table-bordered border-primary" id="data-table">
+                        <thead>
+                            <tr>
+                                <th scope="col">No</th>
+                                <th scope="col text-center">Menu</th>
+                                <th scope="col text-center">Harga</th>
+                                <th scope="col text-center">Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+            </div>
+            <div class="col-4">
+                <caption>Pesanan</caption>
+                <ul id="pesanan"></ul>
+            </div>
+            <div class="col-3">
+                <caption>Total</caption>
+                <p>Rp <span id="totalHarga"></span></p>
+                <span id="totalHarga"></span>
+                <label for="bayar">Tunai :</label>
+                <input type="number" id="tunai" min="0" placeholder="0" class="form-control">
+                <br>
+                <caption>Kembalian</caption>
+                <p>Rp <span id="kembalian"></span></p>
+                <br>
+                <button class="btn btn-warning" onclick="Tunai()">Bayar</button>
+                <button class="btn btn-success" onclick="cetakStruk()">Cetak Struk</button>
+                <div id="pesan"></div>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="text-center text-black">
+        K5B &copy; 2023
+    </footer>
+
+    <script src="javascript/app.js"></script>
+    <script src="javascript/button.js"></script>
+    <script src="javascript/cetak_struk.js"></script>
+    <script src="data.js"></script>
+</body>
+</html>
