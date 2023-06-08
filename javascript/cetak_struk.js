@@ -4,7 +4,7 @@ function cetakStruk() {
         return;
     }
 
-    var struk = '=========== Warung Makan K5B ===========\n';
+    var struk = '========== STAR TERK Drink K5B =========\n';
     for (var i = 0; i < pesanan.length; i++) {
         struk += pesanan[i].menu + ' - Rp ' + pesanan[i].harga + '\n';
     }

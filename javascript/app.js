@@ -71,7 +71,7 @@ function cariPesanan(menu) {
 function tambahJumlahPesanan(menu, jumlah) {
   var index = cariPesanan(menu);
 
-  if (index !== -1) {
+  if (index !== -1) { 
     pesanan[index].jumlah += jumlah;
     pesanan[index].harga += pesanan[index].hargaPerItem * jumlah;
     totalHarga += pesanan[index].hargaPerItem * jumlah;
